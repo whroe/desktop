@@ -3,14 +3,10 @@
   padding: 0;
 }
 html {
-  font-size: 16px;
-  font-size: 125%;
+  font-size: 100%;//参考父元素字体大小
 }
 body {
   background-color: #eff0f4;
-}
-form {
-  font: 0.5px;
 }
 header a:hover{
   color: #827314;
@@ -39,50 +35,20 @@ h1{
    font-family: "é»‘ä½“";
   font-size: 0.9rem;
 }
-/*header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #5fc0cd;
-  color: #fff;
-  padding: 0.5rem 0;
-  text-align: center;
-  height: 1.3rem;
-  line-height: 1.3rem;
-  z-index: 1;
-}
-header > a {
-  position: absolute;
-  font-size: 0.7rem;  
-  text-decoration: none;
-}
-header > a:first-child {
-  left: 0.55rem;
-}
-header > a:last-child {
-  right: 0.55rem;
-}
-header > h1 {
-  font-family: "é»‘ä½“";
-  font-size: 0.9rem;
-  font-weight: 500; 
-  display: inline;
-  
-  margin:0 auto;
-}*/
+//主体样式
 main {
   position: absolute;
-  width: 100%;
+  width: 100%;//宽度自适应
   top: 2.8rem;
   overflow-y: hidden;
 }
 .content {
-  height: auto;
+  height: auto;//高度自定义
 }
 
 .form-row {
-  display: flex;
-  justify-content: flex-start;
+  display: flex;//弹性布局
+  justify-content: flex-start;//项目位于容器开始
   align-items: center;
   background-color: #fff;
   margin-bottom: 0.5rem;
@@ -99,11 +65,10 @@ main {
   border-right: 1px solid #eaedee;
 }
 .form-row input {
-  flex: 1;
+  flex: 1;//让子元素相同的长度
   padding: 0.25rem 1.1rem;
   color: #444;
   border: 0;
-  outline: none;
 }
 
 }
@@ -117,12 +82,11 @@ main {
   color: #fff;
   font-size: 0.8rem;
   border: 0;
-  outline: none;
 }
 
 .forgetpw {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;//项目位于容器结束
   align-items: center;
 }
 .forgetpw > a {
