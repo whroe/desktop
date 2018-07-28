@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>task4-移动界面</title>
-  <link rel="stylesheet" href="app.css">
+  
+  <title>task4</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <header>
@@ -18,20 +18,18 @@
       <form action="">
         <div class="form-row">
           <label class="row-label" for="phonenum">
-            <img src="assert/img/iphone.png" alt="phone">
+            <img src="image/iphone.png" alt="phone">
           </label>
-          <input type="text" placeholder="请输入手机号" maxlength="11" required
-            autofocus onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"
-            id="phonenum"> 
-          <img src="assert/img/cross.png" alt="cross" class="cross">
+          <input type="text" placeholder="请输入手机号" id="phonenum"> 
+          
         </div>
         <div class="form-row">
           <label class="row-label" for="password">
-            <img src="assert/img/lock.png" alt="lock">
+            <img src="image/lock.png" alt="lock">
           </label>
-          <input type="password" placeholder="请输入密码" maxlength="16" required
+          <input type="password" placeholder="请输入密码"
             id="password">
-          <img src="assert/img/cross.png" alt="cross" class="cross">
+          
         </div>
         <button type="submit" class="btn-submit">
           <span>登&nbsp;&nbsp;&nbsp;&nbsp;录</span>

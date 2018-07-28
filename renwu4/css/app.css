@@ -1,11 +1,10 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
 }
 html {
   font-size: 16px;
   font-size: 125%;
-  /* -webkit-text-size-adjust: 100%; */
 }
 body {
   background-color: #eff0f4;
@@ -13,34 +12,11 @@ body {
 form {
   font: 0.5px;
 }
-a:link,
-a:hover,
-a:active,
-a:visited,
-a:focus {
-  color: #fff;
-  text-decoration: none;
+header a:hover{
+  color: #827314;
 }
-/*** header flex***/
-/* header {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #5fc0cd;
-  color: #fff;
-  padding: 0.7rem 0.55rem;
-}
-header > a {
-  font-size: 0.7rem;  
-}
-header > span {
-  font-size: 0.9rem;
-  font-family: "é»‘ä½“";
-} */
 
-/*** header float **/
-/* header {
+header {
   background-color: #5fc0cd;
   color: #fff;
   padding: 0.5rem 0.55rem;
@@ -49,22 +25,21 @@ header > span {
   line-height: 1.3rem;
 }
 header > a {
-  font-size: 0.7rem;  
+  font-size: 0.7rem;
+   text-decoration: none;  
 }
 header > a:first-child {
   float: left;
 }
 header > a:last-child {
   float: right;
+  margin-top: -1.3rem;
 }
-header > span {
-  display: inline-block;
+h1{
+   font-family: "é»‘ä½“";
   font-size: 0.9rem;
-  font-family: "é»‘ä½“"; 
-} */
-
-/*** header absolute **/
-header {
+}
+/*header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -79,6 +54,7 @@ header {
 header > a {
   position: absolute;
   font-size: 0.7rem;  
+  text-decoration: none;
 }
 header > a:first-child {
   left: 0.55rem;
@@ -91,7 +67,9 @@ header > h1 {
   font-size: 0.9rem;
   font-weight: 500; 
   display: inline;
-}
+  
+  margin:0 auto;
+}*/
 main {
   position: absolute;
   width: 100%;
@@ -101,7 +79,7 @@ main {
 .content {
   height: auto;
 }
-/*** form ***/
+
 .form-row {
   display: flex;
   justify-content: flex-start;
@@ -127,40 +105,11 @@ main {
   border: 0;
   outline: none;
 }
-.cross {
-  width: 0.9rem;
-  height: 0.9rem;
-  margin-right: 0.5rem;
+
 }
- /* Webkitæµè§ˆå™¨æ”¯æŒ(éžæ ‡å‡†) https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-webkit-input-placeholder */
-.form-row input::-webkit-input-placeholder {
-	color: #ccc;
-}
-/* Chrome:57+å·²æ”¯æŒåŽ»å‰ç¼€ https://www.chromestatus.com/feature/6715780926275584 */
 .form-row input::placeholder {
   color: #ccc;
 }
-/* IE10+æ”¯æŒ  https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-ms-input-placeholder */
-.form-row input:-ms-input-placeholder {
-  color: #ccc;
-}
- /* Firefox 4-18 */
-.form-row input:-moz-placeholder {
-  color: #ccc;
-}
- /* å¾ˆå¥‡æ€ªï¼Œ FireFox60å®žæµ‹ä¸æ”¯æŒ */
- /* Firefox 19+(éžæ ‡å‡†) https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-moz-placeholder*/
-.form-row input::-moz-placeholder {
-  color: #ccc; 
-}
-/* å®žéªŒä¸­ç‰¹æ€§ https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown */
-.form-row input:placeholder-shown { 
-  color: #ccc; 
-  /* border: 2px solid red; */   /* borderæœ‰æ•ˆå¹¶ä¸”åªæœ‰åœ¨Firefoxæœ‰æ•ˆ*/
-}
-/* .form-row input[placeholder] {
-  color: #ccc;
-} */
 .btn-submit {
   width: 100%;
   padding: 0.8rem 0;
@@ -170,7 +119,7 @@ main {
   border: 0;
   outline: none;
 }
-/*** forgetpw ***/
+
 .forgetpw {
   display: flex;
   justify-content: flex-end;
@@ -179,12 +128,9 @@ main {
 .forgetpw > a {
   font-size: 0.5rem;
   margin: 0.5rem 0.5rem;
+  text-decoration: none;
 }
-.forgetpw a:link,
-.forgetpw a:hover,
-.forgetpw a:active,
-.forgetpw a:visited,
-.forgetpw a:focus {
-  color: #5fc0cd;
-  text-decoration: underline;
+
+.forgetpw a:hover{
+  color: #77662a8a;
 }
