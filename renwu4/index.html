@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task4-移动界面</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header>
+    <a href="#">注册</a>
+    <h1>登录</h1>
+    <a href="#">关闭</a>
+  </header>
+  <main>
+    <div class="content">
+      <form action="">
+        <div class="form-row">
+          <label class="row-label" for="phonenum">
+            <img src="assert/img/iphone.png" alt="phone">
+          </label>
+          <input type="text" placeholder="请输入手机号" maxlength="11" required
+            autofocus onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"
+            id="phonenum"> 
+          <img src="assert/img/cross.png" alt="cross" class="cross">
+        </div>
+        <div class="form-row">
+          <label class="row-label" for="password">
+            <img src="assert/img/lock.png" alt="lock">
+          </label>
+          <input type="password" placeholder="请输入密码" maxlength="16" required
+            id="password">
+          <img src="assert/img/cross.png" alt="cross" class="cross">
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>登&nbsp;&nbsp;&nbsp;&nbsp;录</span>
+        </button>
+      </form>
+      <div class="forgetpw">
+        <a href="#">忘记密码</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
