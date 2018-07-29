@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>⁪--<-<-<@</title>
+
+</head>
+<style>
+*{
+   margin:0;	  	
+}
+body{
+  background:#c399b35e;
+  animation:rot 10s linear infinite;
+}
+.balloon{
+   position:absolute;
+   top:0;
+   left:30px;
+   background-color:#faf9f9;
+   width:100px;
+   height:100px;
+   border-right-color:#c399b35e;
+   border-radius:50% 50% 25% 50%;
+   transform:rotate(45deg);
+   box-shadow:-8px -8px 80px -8px #873940 inset;
+   transition: transform .3s ease-in;
+}
+@keyframes rot{
+0%{background:#77a9bfd6;}
+25%{background:#846e55d6;}
+50%{background:#807aa2d6;}
+75%{background;#84557f70;}
+100%{background;#b37aa2c4;}
+</style>
+<body>
+<div class="balloon"></div>
+
+</body>
+<script>
+   var num =10;
+   var wW =window.innerWidth;
+   var wH =window.innerHeight;
+   bZ=100;
+   var aBalloon=[];
+   
+   setInterval(move,1000/60);
+   init(5);
+   function init(num){
+   var fragment=document.createDocumentFragment();
+   for(var i =0;i<num;i++){
+   var randomX=(Math.random()*wW)-bZ;
+   randomX=Math.abs(randomX);
+   var oBalloon=document.createElement('div'); 
+   oBalloon.className='balloon';
+   oBalloon.style.top=wH+'px';
+   oBalloon.style.left=randomX+'px';
+   oBalloon.speed=~~(Math.random()*2)+1;
+   fragment.appendChild(oBalloon);
+   aBalloon.push(oBalloon);}
+   document.body.appendChild(fragment);}
+   
+   move();
+   function move(){
+   for(var i=0,item;item=aBalloon[i++];)
+   {item.style.top=item.offsetTop-item.speed+'px';
+   if(item.offsetTop<-bZ)
+   {item.style.top=wH+'px'
+}
+}
+}
+   document.addEventListener('click',function(e){if(e.target.className==='balloon')
+   {var ele=e.target;
+   boom.call(ele,function(){ele.remove();
+   init(1);
+});
+   
+}},false);
+ 
+   function boom(callback){this.timer=setInterval(function(){
+   if(this.offsetWidth<10){clearInterval(this.timer);
+   callback&&callback()
+   return false;}
+   this.speed++;
+   this.style.top=this.offsetTop-this.speed+'px'
+   this.style.width=this.style.height=this.offsetWidth-10+'px';}.bind(this),1000/30)}
+</script>
+</html>
