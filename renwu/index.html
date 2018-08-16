@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>task4</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;//参考父元素字体大小
+}
+body {
+  background-color: #eff0f4;
+}
+header a:hover{
+  color: #827314;
+}
+
+header {
+  background-color: #5fc0cd;
+  color: #fff;
+  padding: 0.5rem 0.55rem;
+  text-align: center;
+  height: 1.3rem;
+  line-height: 1.3rem;
+}
+header > a {
+  font-size: 0.7rem;
+   text-decoration: none;  
+}
+header > a:first-child {
+  float: left;
+}
+header > a:last-child {
+  float: right;
+  margin-top: -1.3rem;
+}
+h1{
+   font-family: "é»‘ä½“";
+  font-size: 0.9rem;
+}
+//主体样式
+main {
+  position: absolute;
+  width: 100%;//宽度自适应
+  top: 2.8rem;
+  overflow-y: hidden;
+}
+.content {
+  height: auto;//高度自定义
+}
+
+.form-row {
+  display: flex;//弹性布局
+  justify-content: flex-start;//项目位于容器开始
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+}
+.row-label {
+  padding: 0.5rem 0;
+  line-height: 1.5rem;
+  height: 1.5rem;
+}
+.row-label > img {
+  padding: 0.25rem 1.1rem;
+  width: 0.65rem;
+  height: 1rem;
+  border-right: 1px solid #eaedee;
+}
+.form-row input {
+  flex: 1;//让子元素相同的长度
+  padding: 0.25rem 1.1rem;
+  color: #444;
+  border: 0;
+}
+
+}
+.form-row input::placeholder {
+  color: #ccc;
+}
+.btn-submit {
+  width: 100%;
+  padding: 0.8rem 0;
+  background-color: #5fc0cd;
+  color: #fff;
+  font-size: 0.8rem;
+  border: 0;
+}
+
+.forgetpw {
+  display: flex;
+  justify-content: flex-end;//项目位于容器结束
+  align-items: center;
+}
+.forgetpw > a {
+  font-size: 0.5rem;
+  margin: 0.5rem 0.5rem;
+  text-decoration: none;
+}
+
+.forgetpw a:hover{
+  color: #77662a8a;
+}
+</style>
+<body>
+  <header>
+    <a href="#">注册</a>
+    <h1>登录</h1>
+    <a href="#">关闭</a>
+  </header>
+  <main>
+    <div class="content">
+      <form >
+        <div class="form-row">
+          <label class="row-label" for="phonenum">
+            <img src="image/iphone.png" alt="phone">
+          </label>
+          <input type="text" placeholder="请输入手机号" id="phonenum"> 
+          
+        </div>
+        <div class="form-row">
+          <label class="row-label" for="password">
+            <img src="image/lock.png" alt="lock">
+          </label>
+          <input type="password" placeholder="请输入密码"
+            id="password">
+          
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>登&nbsp;&nbsp;&nbsp;&nbsp;录</span>
+        </button>
+      </form>
+      <div class="forgetpw">
+        <a href="#">忘记密码</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
