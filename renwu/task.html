@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -15,17 +15,21 @@
 			font-size: 1rem;
 		}
 		body{
-			background: url(image/bg2.jpg);
+			background: url(image/bg.jpg);
 		}
 	
 		header{
+			position:relative;
 			width: auto;
 			height: 0;
 			padding-bottom: 33px;
 			background-color: #FFFFFF;
 			line-height: 34px;
-			color: black;
+			color: #000;
 		}
+		#nav{
+			width:100%;
+ 		}
 		.div1{
 			width: 100%;
 			height: 920px;
@@ -34,7 +38,7 @@
 		.div2{
 			height: 857px;
 			width: 1173px;
-			background-color: #080808;
+			
 		}
 		.div3{
 			height:510px;
@@ -58,18 +62,31 @@
 			margin:0 auto;
 		}
 		@media only screen and (min-width:1000px){
+
 			.pull-left{
 				margin-left: 0
 			}
 		}
 		.pull-left{
 			display: inline-block;
-			margin-left:26rem;
+			margin-left:20rem;
+            		list-style-type:none;
+			color:#000;
+		}
+		.pull-left> li{
+			float:left;
 		}
 		.pull-right{
+    			position:relative;
+			top:0;
 			display: inline-block;
 			float: right;
 			margin-right: 7.7rem;
+			list-style-type:none;
+ 			
+		}
+		.pull-right> li{
+			float:left;
 		}
 		.pull-right a:first-child{
 			border-right:1px solid #ddd ;
@@ -88,19 +105,61 @@
 		.pull-right a:last-child{
 			padding-left: 2.5rem;
 		}
+		.one, .zero{
+			color:#d8d84cf2;
+		}
 		.pull-right> span{
 			color: #985F0D;
+		}
+		.clearfix :after {
+			CONTENT:"";
+			clear:both;
+		}
+		.div2>ul{
+			list-style-type:none;
+			display:inline-block;
+   		}
+ 		.div2-left> li{
+			float:left;
+		}
+		.div2-right> li{
+			float:left;
+		}
+                .div2 li:nth-child(2){
+			width:245px;
+			height:345px;
+			background-color:red;
+		}
+ 		.div2 li:last-child{
+			width:245px;
+			height:345px;
+			background-color:red;
 		}
 	</style>
 	<body>
 		<header>
-			<div class="pull-left">
-			<a href="#" title="">xxxxxxm</a><span>,你好！&nbsp;&nbsp;&nbsp;(可用余额：<a href="#" title=""><span>-1</span></a>)</span><a href="#" title="">[退出]</a></div>
-			<div class="pull-right"><a href="#" title="shopping"><img src="image/shopping_03.png"/>购物车<span>0</span></a><a href="#">Me的团购</a><a href="#">团购流程</a><a href="#">关于Me购</a></div>
+			<ul class="pull-left">
+			<li><a href="#" title="">xxxxxxm</a></li><li><span>,你好！&nbsp;&nbsp;&nbsp;(可用余额：<a href="#" title=""><a href="#" class="one">-1</a></a>)</span></li><li><a href="#" title="">[退出]</a></li></ul>
+			<ul class="pull-right"><li><a href="#" title="shopping"><img src="image/shopping_03.png"/>购物车<span class="zero">0</span></a></li><li><a href="#">Me的团购</a></li><li><a href="#">团购流程</a></li><li><a href="#">关于Me购</a></li></ul>
 		</header>
-		<h1 class="div1"><h1></h1></div
+<div class="clearfix"></div>
+		<div class="div1"></div>
 		<div id="nav">
-		<div class="div2">tupian</div>
+		<div class="div2">
+                      <ul class="div2-left">
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a><li>
+                      <li><a href="#"></a><li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a><li>
+                      <li><a href="#"></a><li>
+			<li></li>
+                    </ul>
+                      <ul class="div2-right">
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                   </ul>
+                </div>
 		<div class="div3">tupian</div>
 		<div class="div4">tupian</div>
 		<div class="div5">tupian</div>
