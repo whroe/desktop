@@ -1,0 +1,18 @@
+
+@charset "utf-8";
+/*=====================清除外部样式================== */
+body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dt,dd,img,a,input,header,footer,detail,figure,nav,article,aside,section,main,canvas,mark,video,audio,figcaption,summary,select,option{padding:0;margin:0;}
+ul,ol{list-style:none;}
+img{display:block;border:0;}
+input{outline:none;}
+header,nav,main,footer,article,aside,figure,figcaption{display:block}
+/*=====================定义全局样式================== */
+body{font-size:12px;font-family:"微软雅黑";color:#666;background:#f8fafd;}
+/*=====================定义超链接样式================== */
+a{text-decoration:none;color:#666;}
+a:hover{text-decoration:none;color:#f00;}
+/*=====================定义公共样式================== */
+.w{width:1199px;margin:0 auto;}
+.l{float:left;}
+.r{float:right;}
+/*=====================定义移动端公共样式================== */
