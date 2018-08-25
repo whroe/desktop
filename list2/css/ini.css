@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size:12px;
+  font-family:"微软雅黑";
+  color:#666;
+  background:#f8fafd;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #f00;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.w {
+  width: 1199px;
+  margin: 0 auto;
+  text-align: center;
+}

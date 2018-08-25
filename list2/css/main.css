@@ -1,0 +1,152 @@
+header {
+  height: 85px;
+  background: #FFF;
+}
+
+header .w {
+  height: inherit;
+}
+
+header h1 {
+  width: 127px;
+  height: 65px;
+  padding-top: 20px;
+  margin-right: 10px;
+}
+
+header .w>div {
+  height: 36px;
+  width: 180px;
+  line-height: 18px;
+  padding-left: 9px;
+  margin-top: 31px;
+  color: #898989;
+  border-left: 1px solid #999;
+}
+
+header .w ul {
+  height: 85px;
+  line-height: 85px;
+}
+
+header .w ul li {
+  padding: 0 17px;
+}
+
+#hl {
+  color: #2f80d4;
+}
+
+.banner {
+  height: 430px;
+  background: url(../images/list2/rjcp-banner.jpg) no-repeat center;
+  margin-bottom: 20px;
+}
+
+section {
+  height: 300px;
+}
+
+section li {
+  float: left;
+  margin-right: 12px;
+}
+
+.o2o li img {
+  width: 225px;
+}
+
+.o2o li {
+  float: left;
+}
+
+.title {
+  font-size: 22px;
+  height: 53px;
+  line-height: 53px;
+  color: red;
+}
+
+.figc {
+  height: 40px;
+  line-height: 40px;
+}
+
+
+
+
+footer {
+  height: 195px;
+  background: #535353;
+}
+
+footer .content {
+  width: 1199px;
+  margin: 0 auto;
+}
+
+footer .logo {
+  color: #666;
+  line-height: 40px;
+  font-size: 22px;
+  width: 314px;
+  margin: 20px 200px auto 100px;
+}
+
+footer .tel {
+  width: 220px;
+  height: 154px;
+  margin-top: 40px;
+}
+
+footer .tel>p {
+  height: 43px;
+  line-height: 43px;
+  padding-left: 30px;
+  color: #63a7cc;
+  font-size: 18px;
+  margin-right: 81px;
+}
+
+footer .tel>p:first-child {
+  height: 45px;
+  line-height: 45px;
+  font-size: 22px;
+  color: #666;
+  background: url(../images/index/tel.png) no-repeat left;
+}
+
+footer .tel>p:last-child {
+  width: 228px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 12px;
+  color: #666;
+}
+
+footer .mail {
+  height: 154px;
+  margin-top: 40px;
+}
+
+footer .mail p {
+  font-size: 12px;
+  line-height: 44px;
+  padding-left: 30px;
+}
+
+footer .mail p:first-child {
+  background: url(../images/index/email.png) no-repeat left;
+}
+
+footer .mail p:last-child {
+  background: url(../images/index/add.png) no-repeat left;
+}
+
+.copyright {
+  background: #535353;
+  font-size: 12px;
+  line-height: 38px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
