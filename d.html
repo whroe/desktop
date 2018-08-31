@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>dianming</title>
+</head>
+<body>
+<button style="width:200px;height:100px;font-size:20px;color:yellow;background-color:#3fb56db5;" onclick="myName()">点击</button>
+</body>
+<script>
+var a=["张飞","马云","诸葛亮","刘备","曹操","典韦","于禁"];
+function myName(){
+var num =parseInt(Math.random()*a.length);
+var b=a[num];
+document.write("<h1 style='border:1px solid #ccc;width:500px;height:100px;text-align:center;line-height:100px;color:#8e3ab7b8;margin:0 auto;'>"+b+"</h1>");
+}
+</script>
+</html>
