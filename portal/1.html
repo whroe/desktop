@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="">
+  <link rel="icon" href="images/笑脸.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/1.css" >
+  <link rel="stylesheet" type="text/css" href="css/logo.css" >
+  <title>demo</title>
+ </head>
+<style>
+*{margin:0;}
+div{    position: absolute;
+    left: 20%;
+    top: 65%;
+    width: 42px;
+    height: 60px;
+    background: #fff;
+    border: 3px solid #673C63;
+    border-bottom: 0px;
+    border-radius: 3px;
+    transform: translate(60%, -15%);
+    transform-origin: center right;
+    box-shadow: -2px 0px 0px #95c6f2 inset;
+    animation: shake-left 3s infinite linear;}
+.div1{    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 35px;
+    height: 100px;
+    background: #fff;
+    border: 3px solid #673C63;
+    border-bottom: 0px;
+    border-radius: 3px;
+    transform-origin: center right;
+    transform: translate(60%, -25%);
+    box-shadow: -2px 0px 0px #95c6f2 inset;
+    animation: expand-body 3s infinite linear;}
+.div2{    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    z-index: 0;
+    transform: translate(-25%, -50%) scale(2.5, 2.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: expand-light 3s infinite linear;}
+</style>
+<body>
+<div></div>
+<div class="div1"><div class="div2"></div></div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿@keyframes shake-left {
+  0%,40% {
+    left: 20%;
+    transform: translate(60%, -15%);
+  }
+  50%,54% {
+    left: 20%;
+    transform: translate(60%, -15%);
+  }
+  59% {
+    left: 20%;
+    transform: translate(60%, -15%);
+  }
+  62% {
+    left: 18%;
+    transform: translate(60%, -15%);
+  }
+  65% {
+    left: 21%;
+    transform: translate(60%, -15%);
+  }
+  67% {
+    left: 20%;
+    transform: translate(60%, -15%);
+  }
+  75% {
+    left: 20%;
+    transform: scale(1.15, 0.85) translate(60%, -15%);
+    background: #fff;
+    border-color: #673C63;
+  }
+  91% {
+    left: 20%;
+    transform: scale(1.18, 0.82) translate(60%, -10%);
+    background: #F44336;
+    border-color: #F44336;
+    box-shadow: -2px 0px 0px #F44336 inset;
+  }
+  92% {
+    left: 20%;
+    transform: scale(0.85, 1.15) translate(60%, -15%);
+  }
+  95% {
+    left: 20%;
+    transform: scale(1.05, 0.95) translate(60%, -15%);
+  }
+  97% {
+    left: 20%;
+    transform: scale(1, 1) translate(60%, -15%);
+  }
+}
+
+
+
+@keyframes expand-body {
+  0%,40% {
+    transform: scale(1, 1) translate(60%, -25%);
+  }
+  45%,55% {
+    transform: scale(1.1, 1.1) translate(60%, -28%);
+  }
+  60% {
+    transform: scale(0.89, 0.89) translate(60%, -25%);
+  }
+  65% {
+    transform: scale(1, 1) translate(60%, -25%);
+  }
+  70% {
+    transform: scale(0.95, 0.95) translate(60%, -25%);
+  }
+  75% {
+    transform: scale(1, 1) translate(60%, -25%);
+  }
+}
+
+
+@keyframes expand-light {
+  10%,29%,59%,89% {
+    transform: translate(-25%, -50%) scale(0, 0);
+    border: 2px solid rgba(255, 255, 255, 0);
+  }
+  90%,20%,50% {
+    transform: translate(-25%, -50%) scale(1, 1);
+  }
+  95%,96%,26%,27%,56%,57% {
+    transform: translate(-25%, -50%) scale(2, 2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  0%,28%,58%,100% {
+    transform: translate(-25%, -50%) scale(2.5, 2.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+}

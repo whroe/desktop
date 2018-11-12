@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var Chef = {
+            //body 的宽高
+            'bodyH':document.documentElement.clientHeight || document.body.clientHeight || window.innerHeight,
+            'bodyW':document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth,
+            //动态创建 style 标签添加样式
+            'cssStyle':function (){  
+                            var doc=document;  
+                            var style=doc.createElement("style");
+                            if(style.styleSheet){// IE
+                                style.styleSheet.cssText = arguments[0];
+                            }else{// w3c  
+                                var cssText = doc.createTextNode(arguments[0]);
+                                style.appendChild(cssText); 
+                            }
+                            var heads = doc.getElementsByTagName("head");
+                            if(heads.length){
+                                heads[0].appendChild(style);
+                            }else{
+                                doc.documentElement.appendChild(style);
+                            }
+                        },
+            // 创建并显示遮罩层
+            'createChef':function(){
+                            if(document.body.getElementsByClassName('Chef_opacity').length == 1){
+                                document.body.removeChild(document.body.getElementsByClassName('Chef_opacity')[0]);
+                            }
+                            var div = this.create('div');
+                                div.style.width = this.bodyW + 'px';
+                                div.style.height = this.bodyH + 'px';
+                                div.className = 'Chef_opacity';
+                                document.body.appendChild(div);
+                        },
+        //alert 框
+            'alert':function(){
+                        // 显示遮罩层
+                        this.createChef();
+                        // 创建
+                        var alertDiv = this.create('div'),
+                            alertH2 = this.create('h2'),
+                            alertX = this.create('span'),
+                            alertP = this.create('p'),
+                            alertBDiv = this.create('div'),
+                            alertFirm = this.create('button');
+                        alertX.innerHTML = 'X';
+                        alertX.className = 'Chef_X';
+                        // 插号的click事件 什么都不做
+                        alertX.onclick = function(){alertFirm.onclick();}
+                        // 确定按钮的click事件 什么都不做
+                        alertFirm.onclick = function(){
+                            document.getElementsByClassName('Chef_opacity')[0].style.display = 'none';
+                            document.body.removeChild(alertDiv);
+                        }
+
+                        //样式以及内容
+                        alertDiv.className = 'Chef_alert';
+                        if(arguments.length == 1){
+                            document.getElementsByClassName('Chef_opacity')[0].style.background = 'rgba(0,0,0,'+arguments[0].shade+')'    ;
+                            alertDiv.style.top = arguments[0].offset;
+                            if(arguments[0].width == undefined){
+                                alertDiv.style.width = '260px';
+                            }else{
+                                alertDiv.style.width = arguments[0].width;
+                                alertDiv.style.marginLeft = '-'+parseInt(arguments[0].width)/2 + 'px';
+                            }
+                            arguments[0].title == undefined ? alertH2.innerHTML = '来自网页的信息' : alertH2.innerHTML = arguments[0].title;
+                            arguments[0].content == undefined ? alertP.innerHTML = '' : alertP.innerHTML = arguments[0].content;
+                            arguments[0].firm == undefined ? alertFirm.innerHTML = '确定' : alertFirm.innerHTML = arguments[0].firm;
+                        }else{// -- 默认提示信息
+                            alertH2.innerHTML = '来自网页的信息';
+                            alertFirm.innerHTML = '确定';
+                        }
+                        // 添加到页面
+                        alertBDiv.appendChild(alertFirm);
+                        alertH2.appendChild(alertX);
+                        alertDiv.appendChild(alertH2);
+                        alertDiv.appendChild(alertP);
+                        alertDiv.appendChild(alertBDiv);
+                        document.body.appendChild(alertDiv);
+                    },
+                //创建
+            'create':function(){
+                        return document.createElement(arguments[0]);
+                    }
+        };
+        ;(function(Chef){
+            var cssString = '\
+                    *{padding:0;margin:0;}\
+                    .Chef_opacity{display:block;background:rgba(0,0,0,0.4);position:fixed;top:0;z-index:99;}\
+                    .Chef_alert{position:fixed;top:100px;background:white;border-top:3px solid #FF6636;width:260px;padding-bottom:5px;left:50%;margin-left:-130px;z-index:100;font-family:Microsoft YaHei;}\
+                    .Chef_alert>h2{width:90%;margin:10px auto;margin-bottom:0;font-size:18px;}\
+                    .Chef_alert>p{width:90%;margin:0 auto;padding:25px 0;border-bottom:1px solid #d8d8d8;}\
+                    .Chef_alert>div{width:90%;height:60px;margin:0 auto;font-size:0;text-align: center;}\
+                    .Chef_alert>div>button{width:50%;height:100%;border:0;outline:0;font-size:18px;color:#FE651F;background:white;font-family:Microsoft YaHei;cursor:pointer;}\
+                    .Chef_X{float:right;font-size:13px;color:grey;cursor:pointer;font-weight:normal;}\
+                ';
+            Chef.cssStyle(cssString);
+        })(Chef);
+    </script>
+</head>
+<body>
+    <button id='alertBtn'>alert弹窗</button>
+    <script>
+    //获取对象添加事件
+        document.getElementById('alertBtn').onclick = function(){
+            //调用 Chef.alert() 方法
+            Chef.alert({
+                'title':'标题标题标题',
+                'content':'内容',
+                'firm':'确定',
+                'offset':'100px',
+                'width':'260px',
+                'shade':0.4
+            });
+        };
+    </script>
+</body>
+</html>

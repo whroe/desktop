@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        
+        body {
+            padding: 20px;
+        }
+        
+        #container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 3px solid #333;
+            overflow: hidden;
+        }
+        
+        #list {
+            position: absolute;
+            z-index: 1;
+            width: 4200px;
+            height: 400px;
+        }
+        
+        #list img {
+            float: left;
+            width: 600px;
+            height: 400px;
+        }
+        
+        #buttons {
+            position: absolute;
+            left: 250px;
+            bottom: 20px;
+            z-index: 2;
+            height: 10px;
+            width: 100px;
+        }
+        
+        #buttons span {
+            float: left;
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: #333;
+            cursor: pointer;
+        }
+        
+        #buttons .on {
+            background: orangered;
+        }
+        
+        .arrow {
+            position: absolute;
+            top: 180px;
+            z-index: 2;
+            display: none;
+            width: 40px;
+            height: 40px;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 39px;
+            text-align: center;
+            color: #fff;
+            background-color: RGBA(0, 0, 0, .3);
+            cursor: pointer;
+        }
+        
+        .arrow:hover {
+            background-color: RGBA(0, 0, 0, .7);
+        }
+        
+        #container:hover .arrow {
+            display: block;
+        }
+        
+        #prev {
+            left: 20px;
+        }
+        
+        #next {
+            right: 20px;
+        }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="list" style="left: -600px;">
+            <img src="img/5.jpg" alt="1" />
+            <img src="img/1.jpg" alt="1" />
+            <img src="img/2.jpg" alt="2" />
+            <img src="img/3.jpg" alt="3" />
+            <img src="img/4.jpg" alt="4" />
+            <img src="img/5.jpg" alt="5" />
+            <img src="img/1.jpg" alt="5" />
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+
+    <script>
+        function hasClass(ele, cls) {
+            cls = cls || '';
+            if (cls.replace(/\s/g, '').length == 0) return false; 
+            return new RegExp(' ' + cls + ' ').test(' ' + ele.className + ' ');
+        }
+            
+        function addClass(ele, cls) {
+            if (!hasClass(ele, cls)) {
+                ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
+            }
+        }
+            
+        function removeClass(ele, cls) {
+            if (hasClass(ele, cls)) {
+                var newClass = ' ' + ele.className.replace(/[\t\r\n]/g, '') + ' ';
+                while (newClass.indexOf(' ' + cls + ' ') >= 0) {
+                newClass = newClass.replace(' ' + cls + ' ', ' ');
+                }
+                ele.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+
+        var button = document.getElementsByTagName('button')[0];
+        var toggle = document.getElementsByClassName('toggle')[0];
+
+        button.onclick = function(){
+            if(!hasClass(toggle, 'toggleActive')){
+                addClass(toggle, 'toggleActive')
+            }else{
+                removeClass(toggle, 'toggleActive')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div{
+            width:300px;
+            height:300px;
+            border:1px solid red;
+            background: #ebebeb;
+        }
+
+        .toggle{
+            width:100px;
+            height:100px;
+            margin-top:10px;
+            border:1px solid #c7c6c6;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 20px #333;
+
+            transition: all .1s ease;
+
+            transform-origin:0 0;
+            transform: scale(0);
+        }
+        .toggleActive{
+            animation: toggle .2s forwards;
+        }
+
+        @keyframes toggle{
+            0%{
+                transform: scale(0);
+            }
+            90%{
+                transform: scale(1.1);
+            }
+            100%{
+                transform: scale(1);  
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="div">
+        <button>点击</button>
+        <div class="toggle">
+            <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function hasClass(ele, cls) {
+            cls = cls || '';
+            if (cls.replace(/\s/g, '').length == 0) return false; 
+            return new RegExp(' ' + cls + ' ').test(' ' + ele.className + ' ');
+        }
+            
+        function addClass(ele, cls) {
+            if (!hasClass(ele, cls)) {
+                ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
+            }
+        }
+            
+        function removeClass(ele, cls) {
+            if (hasClass(ele, cls)) {
+                var newClass = ' ' + ele.className.replace(/[\t\r\n]/g, '') + ' ';
+                while (newClass.indexOf(' ' + cls + ' ') >= 0) {
+                newClass = newClass.replace(' ' + cls + ' ', ' ');
+                }
+                ele.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+
+        var button = document.getElementsByTagName('button')[0];
+        var toggle = document.getElementsByClassName('toggle')[0];
+
+        button.onclick = function(){
+            if(!hasClass(toggle, 'toggleActive')){
+                addClass(toggle, 'toggleActive')
+            }else{
+                removeClass(toggle, 'toggleActive')
+            }
+        }
+    </script>
+</body>
+</html>
