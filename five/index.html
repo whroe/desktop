@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery多主题功能全面响应式图片相册画廊轮播图js插件</title>
+	<meta name="keywords" content="jQuery,多主题,功能全面,响应式,图片相册,画廊轮播图,js插件" />
+	<meta name="description" content="jQuery多主题功能全面响应式图片相册画廊轮播图js插件下载。一款多用途响应式jQuery图片画廊插件，兼容手机移动端。" /> 
+	<meta name="author" content="js代码(www.jsdaima.com)" />
+	<meta name="copyright" content="js代码(www.jsdaima.com)" />
+	<script type="text/javascript" src="/static/js/protect.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	
+	<!--以下为必要部分-->
+	<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+	<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>	
+	<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>	
+	<script type='text/javascript' src='unitegallery/themes/default/ug-theme-default.js'></script>
+	<link rel='stylesheet' 		  href='unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+	<style type="text/css">
+		#gallery{
+			margin: 0 auto;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+	
+		<header class="htmleaf-header">
+			<h1>图片相册画廊轮播图js插件 <span>Powered by www.jsdaima.com</span></h1>
+		</header>
+		
+		<div class="htmleaf-content bgcolor-13">
+			<div class="htmleaf-demo center">
+			  <a href="index.html" class="current">Default</a>
+			  <a href="default_no_panel.html">default_no_panel</a>
+			  <a href="carousel.html">carousel</a>
+			  <a href="compact_bottom.html">compact_bottom</a>
+			  <a href="compact_left.html">compact_left</a>
+			  <a href="compact_right.html">compact_right</a>
+			  <a href="compact_top.html">compact_top</a>
+			  <a href="grid_bottom.html">grid_bottom</a>
+			  <a href="grid_horizontal.html">grid_horizontal</a>
+			  <a href="grid_left.html">grid_left</a>
+			  <a href="grid_right.html">grid_right</a>
+			  <a href="grid_top.html">grid_top</a>
+			  <a href="slider.html">slider</a>
+			  <a href="tiles_columns.html">tiles_columns</a>
+			  <a href="tiles_columns_links.html">tiles_columns_links</a>
+			  <a href="tiles_justified.html">tiles_justified</a>
+			  <a href="tiles_justified_links.html">tiles_justified_links</a>
+			  <a href="tilesgrid.html">tilesgrid</a>
+			  <a href="tilesgrid_arrows.html">tilesgrid_arrows</a>
+			</div>
+			<h2>Default Theme</h2>
+		
+			<div id="gallery" style="display:none;">
+			
+				<img alt="Preview Image 1"
+					 src="images/thumbs/thumb1.jpg"
+					 data-image="images/big/image1.jpg"
+					 data-description="js代码（www.jsdaima.com）是IT资源下载及IT技能学习平台。">
+				
+				<img alt="Preview Image 2"
+					 src="images/thumbs/thumb2.jpg"
+					 data-image="images/big/image2.jpg"
+					 data-description="Preview Image 2 Description">
+
+				<!--查看视频和音频效果请打开注释-->
+				<!--Youtube 视频-->
+				<!-- <img alt="Youtube Video"
+					 data-type="youtube"
+					 data-videoid="A3PDXmYoF5U"
+					 data-description="You can include youtube videos easily!"> -->
+					 
+				<img alt="Preview Image 3"
+					 src="images/thumbs/thumb3.jpg"
+					 data-image="images/big/image3.jpg"
+					 data-description="js代码（www.jsdaima.com）是IT资源下载及IT技能学习平台。">
+
+				<!-- <img alt="Vimeo Video"
+					 data-type="vimeo"
+					 src="http://i.vimeocdn.com/video/447294219_200x150.jpg"
+					 data-image="http://i.vimeocdn.com/video/447294219_640.jpg"
+					 data-videoid="73234449"
+					 data-description="This gallery can also play vimeo videos!"> -->
+					
+				<img alt="Preview Image 4"
+					 src="images/thumbs/thumb4.jpg"
+					 data-image="images/big/image4.jpg"
+					 data-description="Preview Image 4 Description">
+				
+				<!-- <img alt="Html5 Video"
+					 src="images/thumbs/html5_video.png"
+					 data-type="html5video"
+					 data-image="http://video-js.zencoder.com/oceans-clip.png"
+					 data-videoogv="http://video-js.zencoder.com/oceans-clip.ogv"
+					 data-videowebm="http://video-js.zencoder.com/oceans-clip.webm"
+					 data-videomp4="http://video-js.zencoder.com/oceans-clip.mp4"
+			    	 data-description="This is html5 video demo played by mediaelement2 player"> -->
+				
+				<img alt="Preview Image 5"
+					 src="images/thumbs/thumb5.jpg"
+					 data-image="images/big/image5.jpg"
+					 data-description="js代码（www.jsdaima.com）是IT资源下载及IT技能学习平台。">
+
+				<!-- <img alt="Wistia Video"			
+					 src="images/thumbs/wistia_video.jpg"
+					 data-type="wistia"
+					 data-image="images/big/wistia_video.jpg"
+					 data-videoid="9oedgxuciv"
+					 data-description="Hey, the gallery plays Wistia videos too!"> -->
+						
+				<img alt="Preview Image 6"
+					 src="images/thumbs/thumb6.jpg"
+					 data-image="images/big/image6.jpg"
+					 data-description="Preview Image 6 Description">
+
+				<!--音频-->
+				<!-- <img alt="Sound Cloud Track"			
+					 src="images/thumbs/sound_cloud.jpg"
+					 data-type="soundcloud"
+					 data-image="images/thumbs/sound_cloud.jpg"
+					 data-trackid="8390970"
+					 data-description="This gallery can play a soundcloud track"> -->
+
+					 
+				<img alt="Preview Image 7"
+					 src="images/thumbs/thumb7.jpg"
+					 data-image="images/big/image7.jpg"
+					 data-description="js代码（www.jsdaima.com）是IT资源下载及IT技能学习平台。">
+
+					 
+				<img alt="Preview Image 8"
+					 src="images/thumbs/thumb8.jpg"
+					 data-image="images/big/image8.jpg"
+					 data-description="Preview Image 8 Description">
+					 
+				<img alt="Preview Image 9"
+					 src="images/thumbs/thumb9.jpg"
+					 data-image="images/big/image9.jpg"
+					 data-description="js代码（www.jsdaima.com）是IT资源下载及IT技能学习平台。">
+				
+				<img alt="Preview Image 10"
+					 src="images/thumbs/thumb10.jpg"
+					 data-image="images/big/image10.jpg"
+					 data-description="Preview Image 10 Description">
+					 
+				<img alt="Preview Image 11"
+					 src="images/thumbs/thumb11.jpg"
+					 data-image="images/big/image11.jpg"
+					 data-description="js代码（www.jsdaima.com）是IT资源下载及IT技能学习平台。">
+
+				<img alt="Preview Image 12"
+					 src="images/thumbs/thumb12.jpg"
+					 data-image="images/big/image12.jpg"
+					 data-description="Preview Image 12 Description">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		jQuery(document).ready(function(){
+
+			jQuery("#gallery").unitegallery();
+
+		});
+		
+	</script>
+</body>
+</html>
